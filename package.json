@@ -1,0 +1,48 @@
+{
+  "name": "viaf-entity-lookup",
+  "version": "0.0.0-development",
+  "description": "Find entities (people, places, organizations) in VIAF using its SPARQL endpoint.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "precommit": "npm run test:single && npm run check-coverage",
+    "cm": "git-cz",
+    "test:single": "nyc tape test/index.js | faucet",
+    "check-coverage": "nyc check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cwrc/viaf-entity-lookup.git"
+  },
+  "keywords": [
+    "viaf",
+    "entity",
+    "linked-data",
+    "sparql"
+  ],
+  "author": "James Chartrand",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/cwrc/viaf-entity-lookup/issues"
+  },
+  "homepage": "https://github.com/cwrc/viaf-entity-lookup#readme",
+  "devDependencies": {
+    "codecov.io": "^0.1.6",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "faucet": "0.0.1",
+    "husky": "^0.14.3",
+    "nock": "^9.0.14",
+    "nyc": "^11.1.0",
+    "semantic-release": "^6.3.6",
+    "tape": "^4.8.0",
+    "watch": "^1.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
