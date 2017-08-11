@@ -1,24 +1,22 @@
-function person(queryString) {
+async function findPerson(queryString) {
     return {}
 }
 
-function place(queryString) {
+async function findPlace(queryString) {
     return {}
 }
 
-function organization(queryString) {
+async function findOrganization(queryString) {
     return {}
 }
 
-function sparql(queryString) {
+async function sparql(queryString) {
     return {}
 }
 
 module.exports = {
-    find: {
-        person: person,
-        place: place,
-        organization: organization,
-        sparql: sparql
-    }
+    findPerson: person,
+    findPlace: place,
+    findOrganization: organization,
+    sparql: sparql
 }
