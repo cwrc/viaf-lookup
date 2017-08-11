@@ -2,7 +2,7 @@
   "name": "viaf-entity-lookup",
   "version": "0.0.0-development",
   "description": "Find entities (people, places, organizations) in VIAF using its SPARQL endpoint.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
