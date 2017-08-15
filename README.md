@@ -41,7 +41,7 @@ where the 'query' argument is an object:
 ```
 {
     entity:  The name of the thing the user wants to find.
-    options: TBD
+    options: TBD 
 }
 ```
 
