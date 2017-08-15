@@ -12,8 +12,6 @@
     "check-coverage": "nyc check-coverage --branches 100 --functions 100 --lines 100",
     "publish-coverage": "codecov --token=bfcccbea-ae1e-4b76-bfa1-83be70525b9a",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov"
-
-
   },
   "repository": {
     "type": "git",
