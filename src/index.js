@@ -16,8 +16,8 @@ async function findPlace(queryString) {
 }
 
 async function findOrganization(queryString) {
-    let viafResults = await viafWrapper.searchCorporate(queryString)
-    let simplifiedResults = viafResults.map(result=>{
+
+    let simplifiedResults = (await viafWrapper.searchCorporate(queryString)).map(result=>{
         return {name: result.heading, uri: result.primaryTopic}})
     return {originalQueryString: queryString, results:  simplifiedResults }
 }
