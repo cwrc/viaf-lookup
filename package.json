@@ -8,9 +8,12 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm run test:single && npm run check-coverage",
     "cm": "git-cz",
-    "test:single": "nyc tape test/index.js | faucet",
-    "check-coverage": "nyc check-coverage --statements 5 --branches 5 --functions 5 --lines 5",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "test:single": "nyc tape test/index.js",
+    "check-coverage": "nyc check-coverage --branches 100 --functions 100 --lines 100",
+    "publish-coverage": "codecov --token=bfcccbea-ae1e-4b76-bfa1-83be70525b9a",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov"
+
+
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,5 @@
 let viafWrapper = require('viaf-wrapper')
 
-
 async function findPerson(queryString) {
     let viafResults = await viafWrapper.searchPersonalNames(queryString)
     let simplifiedResults = viafResults.map(result=>{
