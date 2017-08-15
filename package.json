@@ -1,10 +1,10 @@
 {
   "name": "viaf-entity-lookup",
   "version": "0.0.0-development",
-  "description": "Find entities (people, places, organizations) in VIAF using its SPARQL endpoint.",
+  "description": "Find entities (people, places, organizations) in VIAF.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm run test:single && npm run check-coverage",
     "cm": "git-cz",
