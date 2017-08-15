@@ -1,22 +1,32 @@
+let viafWrapper = require('viaf-wrapper')
+
+
 async function findPerson(queryString) {
-    return {}
+    let viafResults = await viafWrapper.searchPersonalNames(queryString)
+    let simplifiedResults = viafResults.map(result=>{
+        return {name: result.heading, uri: result.primaryTopic, birthDate: result.birthDate, deathDate: result.deathDate
+        }})
+    return {originalQueryString: queryString, results:  simplifiedResults }
 }
 
 async function findPlace(queryString) {
-    return {}
+    let viafResults = await viafWrapper.searchGeographic(queryString)
+    let simplifiedResults = viafResults.map(result=>{
+        return {name: result.heading, uri: result.primaryTopic}})
+    return {originalQueryString: queryString, results:  simplifiedResults }
 }
 
 async function findOrganization(queryString) {
-    return {}
+    let viafResults = await viafWrapper.searchCorporate(queryString)
+    let simplifiedResults = viafResults.map(result=>{
+        return {name: result.heading, uri: result.primaryTopic}})
+    return {originalQueryString: queryString, results:  simplifiedResults }
 }
 
-async function sparql(queryString) {
-    return {}
-}
 
 module.exports = {
-    findPerson: person,
-    findPlace: place,
-    findOrganization: organization,
-    sparql: sparql
+    findPerson: findPerson,
+    findPlace: findPlace,
+    findOrganization: findOrganization,
+
 }
