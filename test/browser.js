@@ -8,10 +8,10 @@ const test = _test(tape) // decorate tape to allow promises
 const sinon = require('sinon')
 const fetchMock = require('fetch-mock');
 
-const queryString = 'bill';
-const queryStringWithNoResults = 'npaiufh';
-const queryStringForTimeout = "testingtimeoutjj";
-const queryStringForError = "johnson";
+const queryString = 'smith';
+const queryStringWithNoResults = 'wilson';
+const queryStringForTimeout = "chartrand";
+const queryStringForError = "cuff";
 const expectedResultLength = 5;
 const emptyResultFixture = JSON.stringify(require('./httpResponseMocks/noResults.json'));
 const personFixture = JSON.stringify(require('./httpResponseMocks/person.json'));

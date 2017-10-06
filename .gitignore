@@ -60,3 +60,6 @@ typings/
 
 # IDEA
 .idea/
+
+# the build directory, which we use only to build a testing version to run in the browser, for development
+build
