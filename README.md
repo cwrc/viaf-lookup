@@ -1,10 +1,12 @@
 ![Picture](http://cwrc.ca/logos/CWRC_logos_2016_versions/CWRCLogo-Horz-FullColour.png)
 
 [![Travis](https://img.shields.io/travis/cwrc/viaf-entity-lookup.svg)](https://travis-ci.org/cwrc/viaf-entity-lookup)
+[![Codecov](https://img.shields.io/codecov/c/github/cwrc/viaf-entity-lookup.svg)](https://codecov.io/gh/cwrc/viaf-entity-lookup)
 [![version](https://img.shields.io/npm/v/viaf-entity-lookup.svg)](http://npm.im/viaf-entity-lookup)
 [![downloads](https://img.shields.io/npm/dm/viaf-entity-lookup.svg)](http://npm-stat.com/charts.html?package=viaf-entity-lookup&from=2015-08-01)
 [![GPL-2.0](https://img.shields.io/npm/l/viaf-entity-lookup.svg)](http://opensource.org/licenses/GPL-2.0)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 # viaf-entity-lookup
@@ -99,6 +101,7 @@ We [decorate](https://en.wikipedia.org/wiki/Decorator_pattern) [tape](https://gi
 We use [fetch-mock](https://github.com/wheresrhys/fetch-mock) to mock http calls (which we make using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) rather than XMLHttpRequest). 
 
 We use [sinon](http://sinonjs.org) [fake timers](http://sinonjs.org/releases/v4.0.1/fake-timers/) to test our timeouts, without having to wait for the timeouts.
+
 #### Code Coverage  
 
 We generate code coverage by instrumenting our code with [istanbul](https://github.com/gotwarlost/istanbul) before [browser-run](https://github.com/juliangruber/browser-run) runs the tests, 
@@ -111,6 +114,19 @@ We use [babelify](https://github.com/babel/babelify) and [babel-plugin-istanbul]
 #### Continuous Integration
 
 We use [Travis](https://travis-ci.org).
+
+Note that to allow our tests to run in Electron on Travis, the following has been added to .travis.yml:
+
+```
+addons:
+  apt:
+    packages:
+      - xvfb
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - npm install
+```
 
 #### Release
 
