@@ -56,40 +56,38 @@ function getTitleLookupURI(queryString) {
     return getEntitySourceURI(queryString, 'local.uniformTitleWorks')
 }
 
-async function callVIAF(url, queryString) {
+function callVIAF(url, queryString) {
 
-
-        let parsedJSON = await fetchWithTimeout(url)
-
-        return parsedJSON.searchRetrieveResponse.records ? parsedJSON.searchRetrieveResponse.records.map(
-            ({
-                 record: {
-                     recordData: {
-                         nameType,
-                         Document: {'@about': uri},
-                         mainHeadings: {data: {text: name}}
+        return fetchWithTimeout(url).then((parsedJSON)=>{
+            return parsedJSON.searchRetrieveResponse.records ? parsedJSON.searchRetrieveResponse.records.map(
+                ({
+                     record: {
+                         recordData: {
+                             nameType,
+                             Document: {'@about': uri},
+                             mainHeadings: {data: {text: name}}
+                         }
                      }
-                 }
-             }) => {
-                return {nameType, id: uri, uri, name, repository: 'VIAF', originalQueryString: queryString}
-            }) : []
-
+                 }) => {
+                    return {nameType, id: uri, uri, name, repository: 'VIAF', originalQueryString: queryString}
+                }) : []
+        })
 
 }
 
-async function findPerson(queryString) {
+ function findPerson(queryString) {
     return callVIAF(getPersonLookupURI(queryString), queryString)
 }
 
-async function findPlace(queryString) {
+ function findPlace(queryString) {
     return callVIAF(getPlaceLookupURI(queryString), queryString)
 }
 
-async function findOrganization(queryString) {
+ function findOrganization(queryString) {
     return callVIAF(getOrganizationLookupURI(queryString), queryString)
 }
 
-async function findTitle(queryString) {
+ function findTitle(queryString) {
     return callVIAF(getTitleLookupURI(queryString), queryString)
 }
 
