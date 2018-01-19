@@ -37,7 +37,7 @@ function fetchWithTimeout(url, config = {}, timeout = 8000) {
 // note that this method is exposed on the npm module to simplify testing,
 // i.e., to allow intercepting the HTTP call during testing, using sinon or similar.
 function getEntitySourceURI(queryString, methodName) {
-    return `http://viaf.org/viaf/search?query=${methodName}+all+%22${encodeURIComponent(queryString)}%22&httpAccept=application/json&maximumRecords=5`;
+    return `https://viaf.org/viaf/search?query=${methodName}+all+%22${encodeURIComponent(queryString)}%22&httpAccept=application/json&maximumRecords=5`;
 }
 
 function getPersonLookupURI(queryString) {
