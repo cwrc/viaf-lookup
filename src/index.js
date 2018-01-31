@@ -59,16 +59,22 @@ function getTitleLookupURI(queryString) {
 function callVIAF(url, queryString) {
 
         return fetchWithTimeout(url).then((parsedJSON)=>{
+            console.log(parsedJSON)
             return parsedJSON.searchRetrieveResponse.records ? parsedJSON.searchRetrieveResponse.records.map(
                 ({
                      record: {
                          recordData: {
                              nameType,
                              Document: {'@about': uri},
-                             mainHeadings: {data: {text: name}}
+                             mainHeadings: {data: headings}
+                            // mainHeadings: {data: {text: name}}
+
                          }
                      }
                  }) => {
+                    let name = Array.isArray(headings) ?
+                        headings[0].text:
+                        headings.text
                     return {nameType, id: uri, uri, name, repository: 'VIAF', originalQueryString: queryString}
                 }) : []
         })
