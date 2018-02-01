@@ -87,6 +87,7 @@ test('lookup builders', (assert)=> {
                 nameType: '',
                 id: '',
                 uri: '',
+                uriForDisplay: '',
                 name: '',
                 repository: '',
                 originalQueryString: ''
