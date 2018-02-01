@@ -70,6 +70,8 @@ and all find* methods return promises that resolve to an object like the followi
     
     uri: "http://viaf.org/viaf/9447148209321300460003/"
     
+    uriForDisplay: "https://viaf.org/viaf/9447148209321300460003/"
+    
 }
 ```
 <br><br>
