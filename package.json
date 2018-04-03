@@ -1,6 +1,6 @@
 {
   "name": "viaf-entity-lookup",
-  "version": "0.0.1-development",
+  "version": "0.0.2-development",
   "description": "Find entities (people, places, organizations) in VIAF.",
   "main": "src/index.js",
   "repository": {
