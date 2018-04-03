@@ -1,6 +1,6 @@
 {
   "name": "viaf-entity-lookup",
-  "version": "0.0.0-development",
+  "version": "0.0.1-development",
   "description": "Find entities (people, places, organizations) in VIAF.",
   "main": "src/index.js",
   "repository": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cwrc/viaf-entity-lookup#readme",
   "scripts": {
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "cm": "git-cz",
     "precommit": "npm run test && npm run check-coverage",
     "browserify": "mkdirp build && browserify test/development.js -o build/development.js --debug -t [ babelify --presets [ es2015 ] ]",
