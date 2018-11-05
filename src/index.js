@@ -75,8 +75,16 @@ function callVIAF(url, queryString) {
                     let name = Array.isArray(headings) ?
                         headings[0].text:
                         headings.text;
-                    let uriForDisplay = uri.replace('http', 'https')
-                    return {nameType, id: uri, uri, uriForDisplay, name, repository: 'VIAF', originalQueryString: queryString}
+                    return {
+                        nameType,
+                        id: uri,
+                        uri,
+                        uriForDisplay: null,
+                        externalLink: uri,
+                        name,
+                        repository: 'VIAF',
+                        originalQueryString: queryString
+                    }
                 }) : []
         })
 
