@@ -68,8 +68,8 @@ function doObjectsHaveSameKeys(...objects){
 }
 
 test('lookup builders', (assert)=> {
-    assert.plan(4);
-    ['getPersonLookupURI', 'getPlaceLookupURI', 'getTitleLookupURI', 'getOrganizationLookupURI'].forEach(uriBuilderMethod => {
+    assert.plan(5);
+    ['getPersonLookupURI', 'getPlaceLookupURI', 'getTitleLookupURI', 'getOrganizationLookupURI', 'getRSLookupURI'].forEach(uriBuilderMethod => {
         assert.comment(uriBuilderMethod);
         assert.ok(viaf[uriBuilderMethod](queryString).includes(queryString), 'should contain the query string');
     });
