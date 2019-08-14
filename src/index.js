@@ -56,6 +56,10 @@ function getTitleLookupURI(queryString) {
     return getEntitySourceURI(queryString, 'local.uniformTitleWorks')
 }
 
+function getRSLookupURI(queryString) {
+    return getEntitySourceURI(queryString, 'local.names')
+}
+
 function callVIAF(url, queryString) {
 
         return fetchWithTimeout(url).then((parsedJSON)=>{
@@ -90,20 +94,24 @@ function callVIAF(url, queryString) {
 
 }
 
- function findPerson(queryString) {
+function findPerson(queryString) {
     return callVIAF(getPersonLookupURI(queryString), queryString)
 }
 
- function findPlace(queryString) {
+function findPlace(queryString) {
     return callVIAF(getPlaceLookupURI(queryString), queryString)
 }
 
- function findOrganization(queryString) {
+function findOrganization(queryString) {
     return callVIAF(getOrganizationLookupURI(queryString), queryString)
 }
 
- function findTitle(queryString) {
+function findTitle(queryString) {
     return callVIAF(getTitleLookupURI(queryString), queryString)
+}
+
+function findRS(queryString) {
+    return callVIAF(getRSLookupURI(queryString), queryString)
 }
 
 module.exports = {
@@ -111,9 +119,11 @@ module.exports = {
     findPlace: findPlace,
     findOrganization: findOrganization,
     findTitle: findTitle,
+    findRS: findRS,
     getPersonLookupURI: getPersonLookupURI,
     getPlaceLookupURI: getPlaceLookupURI,
     getOrganizationLookupURI: getOrganizationLookupURI,
     getTitleLookupURI: getTitleLookupURI,
+    getRSLookupURI: getRSLookupURI,
     fetchWithTimeout: fetchWithTimeout
 }

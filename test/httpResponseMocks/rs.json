@@ -1,0 +1,862 @@
+{
+    "searchRetrieveResponse": {
+        "version": "1.1",
+        "numberOfRecords": "119319",
+        "resultSetIdleTime": "1",
+        "records": [
+            {
+                "record": {
+                    "recordSchema": "http://viaf.org/VIAFCluster",
+                    "recordPacking": "json",
+                    "recordData": {
+                        "@xmlns": "http://viaf.org/viaf/terms#",
+                        "void": "http://rdfs.org/ns/void#",
+                        "foaf": "http://xmlns.com/foaf/0.1/",
+                        "owl": "http://www.w3.org/2002/07/owl#",
+                        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                        "viafID": "9997154801972056310002",
+                        "Document": {
+                            "@about": "http://viaf.org/viaf/9997154801972056310002/",
+                            "inDataset": {
+                                "@resource": "http://viaf.org/viaf/data"
+                            },
+                            "primaryTopic": {
+                                "@resource": "http://viaf.org/viaf/9997154801972056310002"
+                            }
+                        },
+                        "nameType": "Corporate",
+                        "sources": {
+                            "source": {
+                                "@nsid": "http://d-nb.info/gnd/1175585009",
+                                "#text": "DNB|1175585009"
+                            }
+                        },
+                        "length": "13",
+                        "mainHeadings": {
+                            "data": {
+                                "text": "TMS Annual Meeting & Exhibition 144. 2015 Orlando, Fla.",
+                                "sources": {
+                                    "s": "DNB",
+                                    "sid": "DNB|1175585009"
+                                }
+                            },
+                            "mainHeadingEl": {
+                                "datafield": {
+                                    "@ind1": "2",
+                                    "@ind2": " ",
+                                    "@tag": "111",
+                                    "@dtype": "MARC21",
+                                    "subfield": [
+                                        {
+                                            "@code": "a",
+                                            "#text": "TMS Annual Meeting & Exhibition"
+                                        },
+                                        {
+                                            "@code": "n",
+                                            "#text": "144."
+                                        },
+                                        {
+                                            "@code": "d",
+                                            "#text": "2015"
+                                        },
+                                        {
+                                            "@code": "c",
+                                            "#text": "Orlando, Fla."
+                                        }
+                                    ]
+                                },
+                                "sources": {
+                                    "s": "DNB",
+                                    "sid": "DNB|1175585009"
+                                },
+                                "id": "DNB|1175585009"
+                            }
+                        },
+                        "fixed": {
+                            "gender": "u"
+                        },
+                        "x400s": {
+                            "x400": {
+                                "datafield": {
+                                    "@ind1": "2",
+                                    "@ind2": " ",
+                                    "@tag": "411",
+                                    "@dtype": "MARC21",
+                                    "subfield": [
+                                        {
+                                            "@code": "a",
+                                            "#text": "Minerals, Metals and Materials Society"
+                                        },
+                                        {
+                                            "@code": "n",
+                                            "#text": "Annual Meeting & Exhibition"
+                                        },
+                                        {
+                                            "@code": "n",
+                                            "#text": "144."
+                                        },
+                                        {
+                                            "@code": "d",
+                                            "#text": "2015"
+                                        },
+                                        {
+                                            "@code": "c",
+                                            "#text": "Orlando, Fla."
+                                        }
+                                    ],
+                                    "normalized": "minerals metals and materials society annual meeting & exhibition 144 2015 orlando fla"
+                                },
+                                "sources": {
+                                    "s": "DNB",
+                                    "sid": "DNB|1175585009"
+                                }
+                            }
+                        },
+                        "x500s": {
+                            "x500": [
+                                {
+                                    "@viafLink": "148455434",
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "510",
+                                        "@dtype": "MARC21",
+                                        "subfield": [
+                                            {
+                                                "@code": "a",
+                                                "#text": "Minerals, Metals and Materials Society"
+                                            },
+                                            {
+                                                "@code": "4",
+                                                "#text": "vera"
+                                            },
+                                            {
+                                                "@code": "4",
+                                                "#text": "http://d-nb.info/standards/elementset/gnd#organizerOrHost"
+                                            },
+                                            {
+                                                "@code": "e",
+                                                "#text": "Veranstalter"
+                                            }
+                                        ],
+                                        "normalized": "minerals metals and materials society"
+                                    },
+                                    "sources": {
+                                        "s": "DNB",
+                                        "sid": "DNB|1175585009"
+                                    }
+                                },
+                                {
+                                    "@viafLink": "126656723",
+                                    "datafield": {
+                                        "@ind1": " ",
+                                        "@ind2": " ",
+                                        "@tag": "551",
+                                        "@dtype": "MARC21",
+                                        "subfield": [
+                                            {
+                                                "@code": "a",
+                                                "#text": "San Diego, Calif."
+                                            },
+                                            {
+                                                "@code": "4",
+                                                "#text": "ortv"
+                                            },
+                                            {
+                                                "@code": "4",
+                                                "#text": "http://d-nb.info/standards/elementset/gnd#placeOfConferenceOrEvent"
+                                            }
+                                        ],
+                                        "normalized": "san diego calif"
+                                    },
+                                    "sources": {
+                                        "s": "DNB",
+                                        "sid": "DNB|1175585009"
+                                    }
+                                }
+                            ]
+                        },
+                        "birthDate": "0",
+                        "deathDate": "0",
+                        "dateType": "lived",
+                        "nationalityOfEntity": {
+                            "data": {
+                                "text": "US",
+                                "sources": {
+                                    "s": "DNB"
+                                }
+                            }
+                        },
+                        "titles": null,
+                        "history": {
+                            "ht": {
+                                "@recid": "DNB|1175585009",
+                                "@time": "2019-01-20T11:28:40.215089+00:00"
+                            }
+                        },
+                        "creationtime": "2019-08-12T17:02:03.063959+00:00"
+                    }
+                }
+            },
+            {
+                "record": {
+                    "recordSchema": "http://viaf.org/VIAFCluster",
+                    "recordPacking": "json",
+                    "recordData": {
+                        "@xmlns": "http://viaf.org/viaf/terms#",
+                        "void": "http://rdfs.org/ns/void#",
+                        "foaf": "http://xmlns.com/foaf/0.1/",
+                        "owl": "http://www.w3.org/2002/07/owl#",
+                        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                        "viafID": "9993155708730222580004",
+                        "Document": {
+                            "@about": "http://viaf.org/viaf/9993155708730222580004/",
+                            "inDataset": {
+                                "@resource": "http://viaf.org/viaf/data"
+                            },
+                            "primaryTopic": {
+                                "@resource": "http://viaf.org/viaf/9993155708730222580004"
+                            }
+                        },
+                        "nameType": "UniformTitleExpression",
+                        "sources": {
+                            "source": {
+                                "@nsid": "VIAFEXP1089515263",
+                                "#text": "XR|VIAFEXP1089515263"
+                            }
+                        },
+                        "length": "12",
+                        "mainHeadings": {
+                            "data": {
+                                "text": "Frost, Raymond. | Backward society | Spanish | (Mateo : 1965)",
+                                "sources": {
+                                    "s": "XR",
+                                    "sid": "XR|VIAFEXP1089515263"
+                                }
+                            },
+                            "mainHeadingEl": {
+                                "datafield": {
+                                    "@ind1": "1",
+                                    "@ind2": " ",
+                                    "@tag": "100",
+                                    "@dtype": "MARC21",
+                                    "subfield": [
+                                        {
+                                            "@code": "a",
+                                            "#text": "Frost, Raymond."
+                                        },
+                                        {
+                                            "@code": "0",
+                                            "#text": "(viaf)14093801"
+                                        },
+                                        {
+                                            "@code": "t",
+                                            "#text": "Backward society"
+                                        },
+                                        {
+                                            "@code": "l",
+                                            "#text": "Spanish"
+                                        },
+                                        {
+                                            "@code": "s",
+                                            "#text": "(Mateo :"
+                                        },
+                                        {
+                                            "@code": "f",
+                                            "#text": "1965)"
+                                        }
+                                    ]
+                                },
+                                "sources": {
+                                    "s": "XR",
+                                    "sid": "XR|VIAFEXP1089515263"
+                                },
+                                "id": "XR|VIAFEXP1089515263"
+                            }
+                        },
+                        "fixed": {
+                            "gender": "u"
+                        },
+                        "x400s": {
+                            "x400": {
+                                "datafield": {
+                                    "@ind1": "1",
+                                    "@ind2": " ",
+                                    "@tag": "400",
+                                    "@dtype": "MARC21",
+                                    "subfield": [
+                                        {
+                                            "@code": "a",
+                                            "#text": "Frost, Raymond."
+                                        },
+                                        {
+                                            "@code": "t",
+                                            "#text": "Naciones en busca de progreso"
+                                        },
+                                        {
+                                            "@code": "s",
+                                            "#text": "(Mateo :"
+                                        },
+                                        {
+                                            "@code": "f",
+                                            "#text": "1965)"
+                                        }
+                                    ],
+                                    "normalized": "frost raymond naciones en busca de progreso mateo 1965"
+                                },
+                                "sources": {
+                                    "s": "XR",
+                                    "sid": "XR|VIAFEXP1089515263"
+                                }
+                            }
+                        },
+                        "x500s": {
+                            "x500": {
+                                "datafield": {
+                                    "@ind1": "1",
+                                    "@ind2": " ",
+                                    "@tag": "500",
+                                    "@dtype": "MARC21",
+                                    "subfield": {
+                                        "@code": "a",
+                                        "#text": "Mateo, Andrés María,"
+                                    },
+                                    "normalized": "mateo andres maria"
+                                },
+                                "sources": {
+                                    "s": "XR",
+                                    "sid": "XR|VIAFEXP1089515263"
+                                }
+                            }
+                        },
+                        "birthDate": "0",
+                        "deathDate": "0",
+                        "dateType": "lived",
+                        "languageOfEntity": {
+                            "data": {
+                                "text": "spa",
+                                "sources": {
+                                    "s": "XR"
+                                }
+                            }
+                        },
+                        "contentType": {
+                            "data": {
+                                "text": "txt",
+                                "sources": {
+                                    "s": "XR"
+                                }
+                            }
+                        },
+                        "otherDistinguishingCharacteristics": {
+                            "data": {
+                                "text": "mateo",
+                                "sources": {
+                                    "s": "XR"
+                                }
+                            }
+                        },
+                        "titles": {
+                            "author": {
+                                "@id": "VIAF|14093801",
+                                "text": "Frost, Raymond."
+                            },
+                            "work": {
+                                "@id": "VIAF|9113153532487548820006",
+                                "title": "Backward society"
+                            }
+                        },
+                        "history": {
+                            "ht": {
+                                "@recid": "XR|VIAFEXP1089515263",
+                                "@time": "2019-05-05T11:15:02.303479+00:00"
+                            }
+                        },
+                        "creationtime": "2019-08-12T17:38:08.761841+00:00"
+                    }
+                }
+            },
+            {
+                "record": {
+                    "recordSchema": "http://viaf.org/VIAFCluster",
+                    "recordPacking": "json",
+                    "recordData": {
+                        "@xmlns": "http://viaf.org/viaf/terms#",
+                        "void": "http://rdfs.org/ns/void#",
+                        "foaf": "http://xmlns.com/foaf/0.1/",
+                        "owl": "http://www.w3.org/2002/07/owl#",
+                        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                        "viafID": "9975156497260917740009",
+                        "Document": {
+                            "@about": "http://viaf.org/viaf/9975156497260917740009/",
+                            "inDataset": {
+                                "@resource": "http://viaf.org/viaf/data"
+                            },
+                            "primaryTopic": {
+                                "@resource": "http://viaf.org/viaf/9975156497260917740009"
+                            }
+                        },
+                        "nameType": "UniformTitleWork",
+                        "sources": {
+                            "source": {
+                                "@nsid": "VIAFWORK1023934428",
+                                "#text": "XR|VIAFWORK1023934428"
+                            }
+                        },
+                        "length": "12",
+                        "mainHeadings": {
+                            "data": {
+                                "text": "Leonard, Diana,. | Familiar exploitation : a new analysis of marriage in contemporary Western societies",
+                                "sources": {
+                                    "s": "XR",
+                                    "sid": "XR|VIAFWORK1023934428"
+                                }
+                            },
+                            "mainHeadingEl": {
+                                "datafield": {
+                                    "@ind1": "1",
+                                    "@ind2": " ",
+                                    "@tag": "100",
+                                    "@dtype": "MARC21",
+                                    "subfield": [
+                                        {
+                                            "@code": "a",
+                                            "#text": "Leonard, Diana,."
+                                        },
+                                        {
+                                            "@code": "0",
+                                            "#text": "(viaf)42002978"
+                                        },
+                                        {
+                                            "@code": "t",
+                                            "#text": "Familiar exploitation : a new analysis of marriage in contemporary Western societies"
+                                        }
+                                    ]
+                                },
+                                "sources": {
+                                    "s": "XR",
+                                    "sid": "XR|VIAFWORK1023934428"
+                                },
+                                "id": "XR|VIAFWORK1023934428"
+                            }
+                        },
+                        "fixed": {
+                            "gender": "u"
+                        },
+                        "x400s": {
+                            "x400": [
+                                {
+                                    "datafield": {
+                                        "@ind1": "1",
+                                        "@ind2": " ",
+                                        "@tag": "400",
+                                        "@dtype": "MARC21",
+                                        "subfield": [
+                                            {
+                                                "@code": "a",
+                                                "#text": "Leonard, Diana,."
+                                            },
+                                            {
+                                                "@code": "t",
+                                                "#text": "Familiar Exploitation : New Analysis of Marriage"
+                                            }
+                                        ],
+                                        "normalized": "leonard diana familiar exploitation new analysis of marriage"
+                                    },
+                                    "sources": {
+                                        "s": "XR",
+                                        "sid": "XR|VIAFWORK1023934428"
+                                    }
+                                },
+                                {
+                                    "datafield": {
+                                        "@ind1": "1",
+                                        "@ind2": " ",
+                                        "@tag": "400",
+                                        "@dtype": "MARC21",
+                                        "subfield": [
+                                            {
+                                                "@code": "a",
+                                                "#text": "Leonard, Diana,."
+                                            },
+                                            {
+                                                "@code": "t",
+                                                "#text": "Familiar exploitation : a new analysis of marriage in contemporary western society"
+                                            }
+                                        ],
+                                        "normalized": "leonard diana familiar exploitation a new analysis of marriage in contemporary western society"
+                                    },
+                                    "sources": {
+                                        "s": "XR",
+                                        "sid": "XR|VIAFWORK1023934428"
+                                    }
+                                }
+                            ]
+                        },
+                        "birthDate": "0",
+                        "deathDate": "0",
+                        "dateType": "lived",
+                        "languageOfEntity": {
+                            "data": {
+                                "text": "eng",
+                                "sources": {
+                                    "s": "XR"
+                                }
+                            }
+                        },
+                        "contentType": {
+                            "data": {
+                                "text": "txt",
+                                "sources": {
+                                    "s": "XR"
+                                }
+                            }
+                        },
+                        "titles": {
+                            "author": {
+                                "@id": "VIAF|42002978",
+                                "text": "Leonard, Diana,."
+                            }
+                        },
+                        "history": {
+                            "ht": {
+                                "@recid": "XR|VIAFWORK1023934428",
+                                "@time": "2019-08-04T17:36:49.672444+00:00"
+                            }
+                        },
+                        "creationtime": "2019-08-12T16:56:51.680684+00:00"
+                    }
+                }
+            },
+            {
+                "record": {
+                    "recordSchema": "http://viaf.org/VIAFCluster",
+                    "recordPacking": "json",
+                    "recordData": {
+                        "@xmlns": "http://viaf.org/viaf/terms#",
+                        "void": "http://rdfs.org/ns/void#",
+                        "foaf": "http://xmlns.com/foaf/0.1/",
+                        "owl": "http://www.w3.org/2002/07/owl#",
+                        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                        "viafID": "9973151778245918130003",
+                        "Document": {
+                            "@about": "http://viaf.org/viaf/9973151778245918130003/",
+                            "inDataset": {
+                                "@resource": "http://viaf.org/viaf/data"
+                            },
+                            "primaryTopic": {
+                                "@resource": "http://viaf.org/viaf/9973151778245918130003"
+                            }
+                        },
+                        "nameType": "Corporate",
+                        "sources": {
+                            "source": {
+                                "@nsid": "no2018013145",
+                                "#text": "LC|no2018013145"
+                            }
+                        },
+                        "length": "13",
+                        "mainHeadings": {
+                            "data": {
+                                "text": "ASTM Committee D07 on Wood",
+                                "sources": {
+                                    "s": "LC",
+                                    "sid": "LC|no2018013145"
+                                }
+                            },
+                            "mainHeadingEl": {
+                                "datafield": {
+                                    "@ind1": "2",
+                                    "@ind2": " ",
+                                    "@tag": "110",
+                                    "@dtype": "MARC21",
+                                    "subfield": {
+                                        "@code": "a",
+                                        "#text": "ASTM Committee D07 on Wood"
+                                    }
+                                },
+                                "sources": {
+                                    "s": "LC",
+                                    "sid": "LC|no2018013145"
+                                },
+                                "id": "LC|no2018013145"
+                            }
+                        },
+                        "fixed": {
+                            "gender": "u"
+                        },
+                        "x400s": {
+                            "x400": [
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "A.S.T.M. Committee D7 on Wood"
+                                        },
+                                        "normalized": "a s t m committee d7 on wood"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|no2018013145"
+                                    }
+                                },
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "ASTM Committee D7 on Wood"
+                                        },
+                                        "normalized": "astm committee d7 on wood"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|no2018013145"
+                                    }
+                                },
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "American Society for Testing and Materials Committee D07 on Wood"
+                                        },
+                                        "normalized": "american society for testing and materials committee d07 on wood"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|no2018013145"
+                                    }
+                                }
+                            ]
+                        },
+                        "birthDate": "0",
+                        "deathDate": "0",
+                        "dateType": "lived",
+                        "titles": null,
+                        "history": {
+                            "ht": {
+                                "@recid": "LC|no2018013145",
+                                "@time": "2018-02-04T12:14:19.491091+00:00"
+                            }
+                        },
+                        "creationtime": "2018-09-09T12:48:53.480251+00:00",
+                        "xLinks": {
+                            "xLink": "https://www.worldcat.org/identities/lccn-no2018013145"
+                        }
+                    }
+                }
+            },
+            {
+                "record": {
+                    "recordSchema": "http://viaf.org/VIAFCluster",
+                    "recordPacking": "json",
+                    "recordData": {
+                        "@xmlns": "http://viaf.org/viaf/terms#",
+                        "void": "http://rdfs.org/ns/void#",
+                        "foaf": "http://xmlns.com/foaf/0.1/",
+                        "owl": "http://www.w3.org/2002/07/owl#",
+                        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                        "viafID": "9973148705733337080005",
+                        "Document": {
+                            "@about": "http://viaf.org/viaf/9973148705733337080005/",
+                            "inDataset": {
+                                "@resource": "http://viaf.org/viaf/data"
+                            },
+                            "primaryTopic": {
+                                "@resource": "http://viaf.org/viaf/9973148705733337080005"
+                            }
+                        },
+                        "nameType": "Corporate",
+                        "sources": {
+                            "source": {
+                                "@nsid": "n2017181164",
+                                "#text": "LC|n 2017181164"
+                            }
+                        },
+                        "length": "17",
+                        "mainHeadings": {
+                            "data": {
+                                "text": "Taehan Lyumat'isŭ Kŏn'gang Chŏnmun Hakhoe",
+                                "sources": {
+                                    "s": "LC",
+                                    "sid": "LC|n 2017181164"
+                                }
+                            },
+                            "mainHeadingEl": {
+                                "datafield": {
+                                    "@ind1": "2",
+                                    "@ind2": " ",
+                                    "@tag": "110",
+                                    "@dtype": "MARC21",
+                                    "subfield": {
+                                        "@code": "a",
+                                        "#text": "Taehan Lyumat'isŭ Kŏn'gang Chŏnmun Hakhoe"
+                                    }
+                                },
+                                "sources": {
+                                    "s": "LC",
+                                    "sid": "LC|n 2017181164"
+                                },
+                                "id": "LC|n 2017181164"
+                            }
+                        },
+                        "fixed": {
+                            "gender": "u"
+                        },
+                        "x400s": {
+                            "x400": [
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "K.R.H.P.S. (Korean Rheumatology Health Professions Society)"
+                                        },
+                                        "normalized": "k r h p s korean rheumatology health professions society"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|n 2017181164"
+                                    }
+                                },
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "KRHPS (Korean Rheumatology Health Professions Society)"
+                                        },
+                                        "normalized": "krhps korean rheumatology health professions society"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|n 2017181164"
+                                    }
+                                },
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "Korean Rheumatology Health Professions Society"
+                                        },
+                                        "normalized": "korean rheumatology health professions society"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|n 2017181164"
+                                    }
+                                },
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "Lyumat'isŭ Kŏn'gang Hakhoe"
+                                        },
+                                        "normalized": "lyumatisu kongang hakhoe"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|n 2017181164"
+                                    }
+                                },
+                                {
+                                    "datafield": {
+                                        "@ind1": "2",
+                                        "@ind2": " ",
+                                        "@tag": "410",
+                                        "@dtype": "MARC21",
+                                        "subfield": {
+                                            "@code": "a",
+                                            "#text": "대한 류마티스 건강 전문 학회"
+                                        },
+                                        "normalized": "대한 류마티스 건강 전문 학회"
+                                    },
+                                    "sources": {
+                                        "s": "LC",
+                                        "sid": "LC|n 2017181164"
+                                    }
+                                }
+                            ]
+                        },
+                        "x500s": {
+                            "x500": {
+                                "@viafLink": "6239148705717737080008",
+                                "datafield": {
+                                    "@ind1": "2",
+                                    "@ind2": " ",
+                                    "@tag": "510",
+                                    "@dtype": "MARC21",
+                                    "subfield": {
+                                        "@code": "a",
+                                        "#text": "Taehan Kŭn'gwanjŏl Kŏn'gang Hakhoe"
+                                    },
+                                    "normalized": "taehan kungwanjol kongang hakhoe"
+                                },
+                                "sources": {
+                                    "s": "LC",
+                                    "sid": "LC|n 2017181164"
+                                }
+                            }
+                        },
+                        "birthDate": "0",
+                        "deathDate": "0",
+                        "dateType": "lived",
+                        "dates": {
+                            "@min": "199",
+                            "@max": "199",
+                            "date": {
+                                "@count": "1",
+                                "@scaled": "0.00",
+                                "#text": "199"
+                            }
+                        },
+                        "titles": {
+                            "work": {
+                                "sources": {
+                                    "s": "LC",
+                                    "sid": "LC|n 2017181164"
+                                },
+                                "title": "Lyumat'isŭ Kŏn'gang Hakhoe chi, November 1994:"
+                            }
+                        },
+                        "history": {
+                            "ht": {
+                                "@recid": "LC|n 2017181164",
+                                "@time": "2017-02-13T21:28:53.878737+00:00"
+                            }
+                        },
+                        "creationtime": "2019-08-12T17:38:00.414347+00:00",
+                        "xLinks": {
+                            "xLink": "https://www.worldcat.org/identities/lccn-n2017181164"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

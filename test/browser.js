@@ -18,6 +18,7 @@ const personFixture = JSON.stringify(require('./httpResponseMocks/person.json'))
 const placeFixture = JSON.stringify(require('./httpResponseMocks/place.json'));
 const organizationFixture = JSON.stringify(require('./httpResponseMocks/organization.json'));
 const titleFixture = JSON.stringify(require('./httpResponseMocks/title.json'));
+const rsFixture = JSON.stringify(require('./httpResponseMocks/rs.json'));
 
 var clock;
 
@@ -26,7 +27,8 @@ var clock;
     {uriBuilderFn: 'getPersonLookupURI', testFixture:personFixture},
     {uriBuilderFn: 'getPlaceLookupURI', testFixture:placeFixture},
     {uriBuilderFn: 'getOrganizationLookupURI', testFixture:organizationFixture},
-    {uriBuilderFn: 'getTitleLookupURI', testFixture:titleFixture}
+    {uriBuilderFn: 'getTitleLookupURI', testFixture:titleFixture},
+    {uriBuilderFn: 'getRSLookupURI', testFixture:rsFixture}
 ].forEach(entityLookup=> {
 
    let uriBuilderFn = viaf[entityLookup.uriBuilderFn];
@@ -73,7 +75,7 @@ test('lookup builders', (assert)=> {
     });
 });
 
-['findPerson', 'findPlace', 'findOrganization', 'findTitle'].forEach((nameOfLookupFn)=> {
+['findPerson', 'findPlace', 'findOrganization', 'findTitle', 'findRS'].forEach((nameOfLookupFn)=> {
     test(nameOfLookupFn, async function(assert){
         let thisAssert = assert
         thisAssert.plan(18);
