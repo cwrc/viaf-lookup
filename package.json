@@ -22,10 +22,10 @@
   "scripts": {
     "semantic-release": "semantic-release",
     "cm": "git-cz",
-    "browserify": "mkdirp build && browserify test/development.js -o build/development.js --debug -t [ babelify --presets [ es2015 ] ]",
-    "watch": "mkdirp build && watchify test/development.js -o build/development.js --debug --verbose -t [ babelify --presets [ es2015 ] ]",
+    "browserify": "mkdirp build && browserify test/development.js -o build/development.js --debug",
+    "watch": "mkdirp build && watchify test/development.js -o build/development.js --debug --verbose",
     "test": "mkdirp .nyc_output && npm run test:electron && npm run generate-coverage",
-    "test:watch": "cross-env NODE_ENV=test mkdirp build && watchify test/browser.js -o build/development.js --debug --verbose -t [ babelify --presets [ es2015 ] --plugins [ istanbul ] ]",
+    "test:watch": "cross-env NODE_ENV=test mkdirp build && watchify test/browser.js -o build/development.js --debug --verbose",
     "test:browser": "cross-env NODE_ENV=test browserify test/browser.js | browser-run -p 2222 | node test/extract-coverage.js | faucet",
     "test:electron": "cross-env NODE_ENV=test browserify test/browser.js | browser-run | node test/extract-coverage.js | faucet ",
     "test:chrome": "cross-env NODE_ENV=test browserify test/browser.js | browser-run -b chrome | node test/extract-coverage.js | faucet ",
@@ -35,13 +35,11 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-plugin-istanbul": "^4.1.6",
-    "babel-preset-es2015": "6.24.1",
-    "babelify": "^8.0.0",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babelify": "^10.0.0",
     "browser-run": "^6.0.0",
     "browserify": "^16.2.3",
-    "browserify-istanbul": "^3.0.1",
     "codecov": "^3.5.0",
     "commitizen": "^3.1.1",
     "concat-stream": "^2.0.0",
@@ -70,24 +68,5 @@
       "pre-commit": "npm run test && npm run check-coverage"
     }
   },
-  "dependencies": {},
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ],
-          "env": {
-            "test": {
-              "plugins": [
-                "istanbul"
-              ]
-            }
-          }
-        }
-      ]
-    ]
-  }
+  "dependencies": {}
 }
