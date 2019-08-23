@@ -56,7 +56,7 @@ test('lookup builders', ()=> {
         expect.assertions(18);
         let lookupFn = viaf[nameOfLookupFn];
         expect(typeof lookupFn).toBe('function');
-        results = await lookupFn(queryString);
+        let results = await lookupFn(queryString);
         expect(Array.isArray(results)).toBe(true);
         expect(results.length).toBeLessThanOrEqual(expectedResultLength);
         results.forEach(singleResult => {
@@ -74,7 +74,7 @@ test('lookup builders', ()=> {
         })
 
         // with no results
-        let results = await lookupFn(queryStringWithNoResults);
+        results = await lookupFn(queryStringWithNoResults);
         expect(Array.isArray(results)).toBe(true);
         expect(results.length).toBe(0);
 
