@@ -79,7 +79,7 @@ test('lookup builders', ()=> {
         // with no results
        expect.assertions(2);
 
-       const results = await await viaf[nameOfLookupFn](queryStringWithNoResults);
+       const results = await viaf[nameOfLookupFn](queryStringWithNoResults);
        expect(Array.isArray(results)).toBe(true);
        expect(results.length).toBe(0);
    })
