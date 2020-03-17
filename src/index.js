@@ -17,23 +17,24 @@ const fetchWithTimeout = (url, config = {}, time = 30000) => {
 
     // Create a promise that rejects in <time> milliseconds
     const timeout = new Promise((resolve, reject) => {
-        let id = setTimeout(() => {
+        const id = setTimeout(() => {
             clearTimeout(id);
             reject('Call to VIAF timed out')
         }, time)
-    })
+    });
 
     // Returns a race between our timeout and the passed in promise
     return Promise.race([
         fetch(url, config),
         timeout
     ]);
-
 };
 
 // note that this method is exposed on the npm module to simplify testing,
 // i.e., to allow intercepting the HTTP call during testing, using sinon or similar.
-const getEntitySourceURI = (queryString, methodName) => `https://viaf.org/viaf/search?query=${methodName}+all+%22${encodeURIComponent(queryString)}%22&httpAccept=application/json&maximumRecords=5`;
+const getEntitySourceURI = (queryString, methodName) => {
+    return `https://viaf.org/viaf/search?query=${methodName}+all+%22${encodeURIComponent(queryString)}%22&httpAccept=application/json&maximumRecords=5`;
+};
 
 const getPersonLookupURI = (queryString) => getEntitySourceURI(queryString, 'local.personalNames');
 
@@ -47,17 +48,17 @@ const getRSLookupURI = (queryString) => getEntitySourceURI(queryString, 'local.n
 
 const callVIAF = async (url, queryString) => {
 
-    let response = await fetchWithTimeout(url)
+    const response = await fetchWithTimeout(url)
         .catch((error) => {
             return error;
-        })
+        });
 
     //if status not ok, through an error
     if (!response.ok) throw new Error(`Something wrong with the call to VIAF, possibly a problem with the network or the server. HTTP error: ${response.status}`)
 
-    response = await response.json();
+    const responseJson = await response.json();
 
-    const results = response.searchRetrieveResponse.records ? response.searchRetrieveResponse.records.map(
+    const results = responseJson.searchRetrieveResponse.records ? responseJson.searchRetrieveResponse.records.map(
         ({
             record: {
                 recordData: {
@@ -88,8 +89,7 @@ const callVIAF = async (url, queryString) => {
         }) : [];
 
     return results;
-
-}
+};
 
 const findPerson = (queryString) => callVIAF(getPersonLookupURI(queryString), queryString);
 
