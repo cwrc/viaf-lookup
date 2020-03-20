@@ -7,123 +7,110 @@
          credentials: 'same-origin'
     }
 */
-function fetchWithTimeout(url, config = {}, timeout = 30000) {
+const fetchWithTimeout = (url, config = {}, time = 30000) => {
 
-        return new Promise((resolve, reject) => {
-            // the reject on the promise in the timeout callback won't have any effect, *unless*
-            // the timeout is triggered before the fetch resolves, in which case the setTimeout rejects
-            // the whole outer Promise, and the promise from the fetch is dropped entirely.
-            setTimeout(() => reject(new Error('Call to VIAF timed out')), timeout);
-            fetch(url, config).then(resolve, reject);
-        }).then(
-            response=>{
-                // check for ok status
-                if (response.ok) {
-                    return response.json()
-                }
-                // if status not ok, through an error
-                throw new Error(`Something wrong with the call to VIAF, possibly a problem with the network or the server. HTTP error: ${response.status}`);
-            }/*,
-            // instead of handling and rethrowing the error here, we just let it bubble through
-            error => {
-            // we could instead handle a reject from either of the fetch or setTimeout promises,
-            // whichever first rejects, do some loggingor something, and then throw a new rejection.
-                console.log(error)
-                return Promise.reject(new Error(`some error jjk: ${error}`))
-            }*/
-        )
-}
+    /*
+        the reject on the promise in the timeout callback won't have any effect, *unless*
+        the timeout is triggered before the fetch resolves, in which case the setTimeout rejects
+        the whole outer Promise, and the promise from the fetch is dropped entirely.
+    */
+
+    // Create a promise that rejects in <time> milliseconds
+    const timeout = new Promise((resolve, reject) => {
+        const id = setTimeout(() => {
+            clearTimeout(id);
+            reject('Call to VIAF timed out')
+        }, time)
+    });
+
+    // Returns a race between our timeout and the passed in promise
+    return Promise.race([
+        fetch(url, config),
+        timeout
+    ]);
+};
 
 // note that this method is exposed on the npm module to simplify testing,
 // i.e., to allow intercepting the HTTP call during testing, using sinon or similar.
-function getEntitySourceURI(queryString, methodName) {
+const getEntitySourceURI = (queryString, methodName) => {
     return `https://viaf.org/viaf/search?query=${methodName}+all+%22${encodeURIComponent(queryString)}%22&httpAccept=application/json&maximumRecords=5`;
-}
+};
 
-function getPersonLookupURI(queryString) {
-    return getEntitySourceURI(queryString, 'local.personalNames')
-}
+const getPersonLookupURI = (queryString) => getEntitySourceURI(queryString, 'local.personalNames');
 
-function getPlaceLookupURI(queryString) {
-    return getEntitySourceURI(queryString, 'local.geographicNames')
-}
+const getPlaceLookupURI = (queryString) => getEntitySourceURI(queryString, 'local.geographicNames');
 
-function getOrganizationLookupURI(queryString) {
-    return getEntitySourceURI(queryString, 'local.corporateNames')
-}
+const getOrganizationLookupURI = (queryString) => getEntitySourceURI(queryString, 'local.corporateNames');
 
-function getTitleLookupURI(queryString) {
-    return getEntitySourceURI(queryString, 'local.uniformTitleWorks')
-}
+const getTitleLookupURI = (queryString) => getEntitySourceURI(queryString, 'local.uniformTitleWorks');
 
-function getRSLookupURI(queryString) {
-    return getEntitySourceURI(queryString, 'local.names')
-}
+const getRSLookupURI = (queryString) => getEntitySourceURI(queryString, 'local.names');
 
-function callVIAF(url, queryString) {
+const callVIAF = async (url, queryString) => {
 
-        return fetchWithTimeout(url).then((parsedJSON)=>{
-            console.log(parsedJSON)
-            return parsedJSON.searchRetrieveResponse.records ? parsedJSON.searchRetrieveResponse.records.map(
-                ({
-                     record: {
-                         recordData: {
-                             nameType,
-                             Document: {'@about': uri},
-                             mainHeadings: {data: headings}
-                            // mainHeadings: {data: {text: name}}
+    const response = await fetchWithTimeout(url)
+        .catch((error) => {
+            return error;
+        });
 
-                         }
-                     }
-                 }) => {
-                    let name = Array.isArray(headings) ?
-                        headings[0].text:
-                        headings.text;
-                    return {
-                        nameType,
-                        id: uri,
-                        uri,
-                        uriForDisplay: null,
-                        externalLink: uri,
-                        name,
-                        repository: 'VIAF',
-                        originalQueryString: queryString
+    //if status not ok, through an error
+    if (!response.ok) throw new Error(`Something wrong with the call to VIAF, possibly a problem with the network or the server. HTTP error: ${response.status}`)
+
+    const responseJson = await response.json();
+
+    const results = responseJson.searchRetrieveResponse.records ? responseJson.searchRetrieveResponse.records.map(
+        ({
+            record: {
+                recordData: {
+                    nameType,
+                    Document: {
+                        '@about': uri
+                    },
+                    mainHeadings: {
+                        data: headings
                     }
-                }) : []
-        })
+                    // mainHeadings: {data: {text: name}}
+                }
+            }
+        }) => {
+            const name = Array.isArray(headings) ?
+                headings[0].text :
+                headings.text;
+            return {
+                nameType,
+                id: uri,
+                uri,
+                uriForDisplay: null,
+                externalLink: uri,
+                name,
+                repository: 'VIAF',
+                originalQueryString: queryString
+            }
+        }) : [];
 
-}
+    return results;
+};
 
-function findPerson(queryString) {
-    return callVIAF(getPersonLookupURI(queryString), queryString)
-}
+const findPerson = (queryString) => callVIAF(getPersonLookupURI(queryString), queryString);
 
-function findPlace(queryString) {
-    return callVIAF(getPlaceLookupURI(queryString), queryString)
-}
+const findPlace = (queryString) => callVIAF(getPlaceLookupURI(queryString), queryString);
 
-function findOrganization(queryString) {
-    return callVIAF(getOrganizationLookupURI(queryString), queryString)
-}
+const findOrganization = (queryString) => callVIAF(getOrganizationLookupURI(queryString), queryString);
 
-function findTitle(queryString) {
-    return callVIAF(getTitleLookupURI(queryString), queryString)
-}
+const findTitle = (queryString) => callVIAF(getTitleLookupURI(queryString), queryString);
 
-function findRS(queryString) {
-    return callVIAF(getRSLookupURI(queryString), queryString)
-}
+const findRS = (queryString) => callVIAF(getRSLookupURI(queryString), queryString);
 
-module.exports = {
-    findPerson: findPerson,
-    findPlace: findPlace,
-    findOrganization: findOrganization,
-    findTitle: findTitle,
-    findRS: findRS,
-    getPersonLookupURI: getPersonLookupURI,
-    getPlaceLookupURI: getPlaceLookupURI,
-    getOrganizationLookupURI: getOrganizationLookupURI,
-    getTitleLookupURI: getTitleLookupURI,
-    getRSLookupURI: getRSLookupURI,
-    fetchWithTimeout: fetchWithTimeout
+export default {
+    findPerson,
+    findPlace,
+    findOrganization,
+    findTitle,
+    findRS,
+    getPersonLookupURI,
+    getPlaceLookupURI,
+    getOrganizationLookupURI,
+    getTitleLookupURI,
+    getRSLookupURI,
+    fetchWithTimeout
 }
