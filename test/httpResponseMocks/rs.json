@@ -3,8 +3,7 @@
         "version": "1.1",
         "numberOfRecords": "119319",
         "resultSetIdleTime": "1",
-        "records": [
-            {
+        "records": [{
                 "record": {
                     "recordSchema": "http://viaf.org/VIAFCluster",
                     "recordPacking": "json",
@@ -46,8 +45,7 @@
                                     "@ind2": " ",
                                     "@tag": "111",
                                     "@dtype": "MARC21",
-                                    "subfield": [
-                                        {
+                                    "subfield": [{
                                             "@code": "a",
                                             "#text": "TMS Annual Meeting & Exhibition"
                                         },
@@ -82,8 +80,7 @@
                                     "@ind2": " ",
                                     "@tag": "411",
                                     "@dtype": "MARC21",
-                                    "subfield": [
-                                        {
+                                    "subfield": [{
                                             "@code": "a",
                                             "#text": "Minerals, Metals and Materials Society"
                                         },
@@ -113,16 +110,14 @@
                             }
                         },
                         "x500s": {
-                            "x500": [
-                                {
+                            "x500": [{
                                     "@viafLink": "148455434",
                                     "datafield": {
                                         "@ind1": "2",
                                         "@ind2": " ",
                                         "@tag": "510",
                                         "@dtype": "MARC21",
-                                        "subfield": [
-                                            {
+                                        "subfield": [{
                                                 "@code": "a",
                                                 "#text": "Minerals, Metals and Materials Society"
                                             },
@@ -153,8 +148,7 @@
                                         "@ind2": " ",
                                         "@tag": "551",
                                         "@dtype": "MARC21",
-                                        "subfield": [
-                                            {
+                                        "subfield": [{
                                                 "@code": "a",
                                                 "#text": "San Diego, Calif."
                                             },
@@ -240,8 +234,7 @@
                                     "@ind2": " ",
                                     "@tag": "100",
                                     "@dtype": "MARC21",
-                                    "subfield": [
-                                        {
+                                    "subfield": [{
                                             "@code": "a",
                                             "#text": "Frost, Raymond."
                                         },
@@ -284,8 +277,7 @@
                                     "@ind2": " ",
                                     "@tag": "400",
                                     "@dtype": "MARC21",
-                                    "subfield": [
-                                        {
+                                    "subfield": [{
                                             "@code": "a",
                                             "#text": "Frost, Raymond."
                                         },
@@ -418,8 +410,7 @@
                                     "@ind2": " ",
                                     "@tag": "100",
                                     "@dtype": "MARC21",
-                                    "subfield": [
-                                        {
+                                    "subfield": [{
                                             "@code": "a",
                                             "#text": "Leonard, Diana,."
                                         },
@@ -444,15 +435,13 @@
                             "gender": "u"
                         },
                         "x400s": {
-                            "x400": [
-                                {
+                            "x400": [{
                                     "datafield": {
                                         "@ind1": "1",
                                         "@ind2": " ",
                                         "@tag": "400",
                                         "@dtype": "MARC21",
-                                        "subfield": [
-                                            {
+                                        "subfield": [{
                                                 "@code": "a",
                                                 "#text": "Leonard, Diana,."
                                             },
@@ -474,8 +463,7 @@
                                         "@ind2": " ",
                                         "@tag": "400",
                                         "@dtype": "MARC21",
-                                        "subfield": [
-                                            {
+                                        "subfield": [{
                                                 "@code": "a",
                                                 "#text": "Leonard, Diana,."
                                             },
@@ -586,8 +574,7 @@
                             "gender": "u"
                         },
                         "x400s": {
-                            "x400": [
-                                {
+                            "x400": [{
                                     "datafield": {
                                         "@ind1": "2",
                                         "@ind2": " ",
@@ -715,8 +702,7 @@
                             "gender": "u"
                         },
                         "x400s": {
-                            "x400": [
-                                {
+                            "x400": [{
                                     "datafield": {
                                         "@ind1": "2",
                                         "@ind2": " ",

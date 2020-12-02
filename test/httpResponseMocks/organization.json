@@ -3,8 +3,7 @@
     "version": "1.1",
     "numberOfRecords": "1123",
     "resultSetIdleTime": "1",
-    "records": [
-      {
+    "records": [{
         "record": {
           "recordSchema": "http://viaf.org/VIAFCluster",
           "recordPacking": "json",
@@ -68,8 +67,7 @@
                   "@ind2": " ",
                   "@tag": "410",
                   "@dtype": "MARC21",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "University of Arkansas, Fayetteville."
                     },
@@ -167,8 +165,7 @@
             },
             "nameType": "Corporate",
             "sources": {
-              "source": [
-                {
+              "source": [{
                   "@nsid": "no2016144925",
                   "#text": "LC|no2016144925"
                 },
@@ -193,15 +190,13 @@
                   ]
                 }
               },
-              "mainHeadingEl": [
-                {
+              "mainHeadingEl": [{
                   "datafield": {
                     "@ind1": "2",
                     "@ind2": " ",
                     "@tag": "110",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "University of Otago."
                       },
@@ -233,8 +228,7 @@
                     "@ind2": " ",
                     "@tag": "110",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "University of Otago."
                       },
@@ -287,15 +281,13 @@
               }
             },
             "x500s": {
-              "x500": [
-                {
+              "x500": [{
                   "datafield": {
                     "@ind1": "1",
                     "@ind2": " ",
                     "@tag": "500",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "Jones, D. Gareth"
                       },
@@ -322,8 +314,7 @@
                     "@ind2": " ",
                     "@tag": "510",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "University of Otago."
                       },
@@ -346,8 +337,7 @@
                     "@ind2": " ",
                     "@tag": "510",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "University of Otago."
                       },
@@ -395,8 +385,7 @@
               }
             },
             "history": {
-              "ht": [
-                {
+              "ht": [{
                   "@recid": "LC|no2016144925",
                   "@time": "2016-11-13T12:12:48.062437+00:00"
                 },
@@ -468,8 +457,7 @@
               "gender": "u"
             },
             "x400s": {
-              "x400": [
-                {
+              "x400": [{
                   "datafield": {
                     "@ind1": "2",
                     "@ind2": " ",
@@ -492,8 +480,7 @@
                     "@ind2": " ",
                     "@tag": "410",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "U.S. Fish and Wildlife Service."
                       },

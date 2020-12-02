@@ -3,8 +3,7 @@
     "version": "1.1",
     "numberOfRecords": "63",
     "resultSetIdleTime": "1",
-    "records": [
-      {
+    "records": [{
         "record": {
           "recordSchema": "http://viaf.org/VIAFCluster",
           "recordPacking": "json",
@@ -62,8 +61,7 @@
               "gender": "u"
             },
             "x400s": {
-              "x400": [
-                {
+              "x400": [{
                   "datafield": {
                     "@ind1": " ",
                     "@ind2": " ",
@@ -206,8 +204,7 @@
             },
             "nameType": "Geographic",
             "sources": {
-              "source": [
-                {
+              "source": [{
                   "@nsid": "fst01939713",
                   "#text": "FAST|fst01939713"
                 },
@@ -219,8 +216,7 @@
             },
             "length": "12",
             "mainHeadings": {
-              "data": [
-                {
+              "data": [{
                   "text": "Jones Canyon (Sandoval County, N.M.)",
                   "sources": {
                     "s": "NLI",
@@ -235,15 +231,13 @@
                   }
                 }
               ],
-              "mainHeadingEl": [
-                {
+              "mainHeadingEl": [{
                   "datafield": {
                     "@ind1": " ",
                     "@ind2": " ",
                     "@tag": "151",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "Jones Canyon (Sandoval County, N.M.)"
                       },
@@ -271,8 +265,7 @@
                     "@ind2": " ",
                     "@tag": "151",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "New Mexico"
                       },
@@ -324,8 +317,7 @@
             "dateType": "lived",
             "titles": null,
             "history": {
-              "ht": [
-                {
+              "ht": [{
                   "@recid": "FAST|fst01939713",
                   "@time": "2016-10-16T12:17:58.704402+00:00"
                 },
@@ -468,8 +460,7 @@
               "gender": "u"
             },
             "x400s": {
-              "x400": [
-                {
+              "x400": [{
                   "datafield": {
                     "@ind1": " ",
                     "@ind2": " ",

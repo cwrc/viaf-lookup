@@ -3,8 +3,7 @@
     "version": "1.1",
     "numberOfRecords": "2819",
     "resultSetIdleTime": "1",
-    "records": [
-      {
+    "records": [{
         "record": {
           "recordSchema": "http://viaf.org/VIAFCluster",
           "recordPacking": "json",
@@ -81,8 +80,7 @@
               }
             },
             "x500s": {
-              "x500": [
-                {
+              "x500": [{
                   "@viafLink": "120343929",
                   "datafield": {
                     "@ind1": "1",
@@ -244,8 +242,7 @@
                   "@ind2": " ",
                   "@tag": "100",
                   "@dtype": "MARC21",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Jones, Jesse,"
                     },
@@ -339,8 +336,7 @@
                   "@ind2": " ",
                   "@tag": "100",
                   "@dtype": "MARC21",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Jones, E. Stanley."
                     },
@@ -397,8 +393,7 @@
                 "datafield": {
                   "@dtype": "MARC21",
                   "@tag": "400",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Jones, E. Stanley."
                     },
@@ -466,8 +461,7 @@
                   "@ind2": " ",
                   "@tag": "100",
                   "@dtype": "MARC21",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Henderson, Lauren,"
                     },
@@ -502,8 +496,7 @@
                   "@ind2": " ",
                   "@tag": "400",
                   "@dtype": "MARC21",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Henderson, Lauren,"
                     },
@@ -557,8 +550,7 @@
                 "datafield": {
                   "@dtype": "MARC21",
                   "@tag": "400",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Henderson, Lauren,"
                     },
@@ -626,8 +618,7 @@
                   "@ind2": " ",
                   "@tag": "100",
                   "@dtype": "MARC21",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Morier, James Justinien,"
                     },
@@ -656,15 +647,13 @@
               "gender": "u"
             },
             "x400s": {
-              "x400": [
-                {
+              "x400": [{
                   "datafield": {
                     "@ind1": "1",
                     "@ind2": " ",
                     "@tag": "400",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "Morier, James Justinien,"
                       },
@@ -690,8 +679,7 @@
                     "@ind2": " ",
                     "@tag": "400",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "Morier, James Justinien,"
                       },
@@ -717,8 +705,7 @@
                     "@ind2": " ",
                     "@tag": "400",
                     "@dtype": "MARC21",
-                    "subfield": [
-                      {
+                    "subfield": [{
                         "@code": "a",
                         "#text": "Morier, James Justinien,"
                       },
@@ -774,8 +761,7 @@
                 "datafield": {
                   "@dtype": "MARC21",
                   "@tag": "400",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Morier, James Justinien,"
                     },
