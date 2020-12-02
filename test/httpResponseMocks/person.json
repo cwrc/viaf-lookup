@@ -1,9 +1,9 @@
-{ "searchRetrieveResponse": {
+{
+  "searchRetrieveResponse": {
     "version": "1.1",
     "numberOfRecords": "25851",
     "resultSetIdleTime": "1",
-    "records": [
-      {
+    "records": [{
         "record": {
           "recordSchema": "http://viaf.org/VIAFCluster",
           "recordPacking": "json",
@@ -25,8 +25,7 @@
             },
             "nameType": "Personal",
             "sources": {
-              "source": [
-                {
+              "source": [{
                   "@nsid": "0000000066177993",
                   "#text": "ISNI|0000000066177993"
                 },
@@ -51,8 +50,7 @@
                   ]
                 }
               },
-              "mainHeadingEl": [
-                {
+              "mainHeadingEl": [{
                   "datafield": {
                     "@ind1": "1",
                     "@ind2": " ",
@@ -69,8 +67,7 @@
                   },
                   "id": "NTA|131858564",
                   "links": {
-                    "link": [
-                      {
+                    "link": [{
                         "match": null,
                         "#text": "ISNI|0000000066177993"
                       },
@@ -148,8 +145,7 @@
             "dates": {
               "@min": "196",
               "@max": "197",
-              "date": [
-                {
+              "date": [{
                   "@count": "1",
                   "@scaled": "0.00",
                   "#text": "196"
@@ -203,8 +199,7 @@
               }
             },
             "history": {
-              "ht": [
-                {
+              "ht": [{
                   "@recid": "NTA|131858564",
                   "@time": "2017-03-13T23:00:16.178913+00:00"
                 },
@@ -404,8 +399,7 @@
                   "@ind2": " ",
                   "@tag": "100",
                   "@dtype": "MARC21",
-                  "subfield": [
-                    {
+                  "subfield": [{
                       "@code": "a",
                       "#text": "Jones, Sheep"
                     },
